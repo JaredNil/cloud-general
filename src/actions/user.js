@@ -8,7 +8,7 @@ import { API_URL } from '../config.js';
 
 export const registration = async (email, password) => {
 	try {
-		const responce = await axios.post('${API_URL}api/auth/registration',
+		const responce = await axios.post(`${API_URL}api/auth/registration`,
 			{
 				email,
 				password

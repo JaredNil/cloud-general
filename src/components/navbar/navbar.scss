@@ -1,0 +1,114 @@
+@import "../../utils/utils.scss";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.navbar{
+	width: 100%;
+	.container{
+		margin: 8px 20px;
+		max-width: 1100px;
+		margin: 0 auto;
+		min-height: 40px;
+		font-family: $font-family;
+		display: flex;
+		align-items: center;
+		
+	}
+
+	&__main{
+		flex: 0 0 $width-leftBar;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		color: #000;
+		
+		img{
+			padding: 0 0 0 0;
+			width: 25px;
+			height: 25px;
+			cursor: pointer;
+		}
+		span{
+			padding: 7px 10px;
+			font-size: 22px;
+			cursor: pointer;
+			text-decoration: none!important;
+		}
+	}
+
+	&__introduce{
+		flex: 1 0 auto;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		span{
+			font-weight: 700;
+			letter-spacing: -1.1px;
+		}
+	}
+
+	&__tools{
+		margin: auto;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		
+		transition: all 1s ease 0s;
+		.navbar__find{
+			display: flex;
+			align-items: center;
+			height: 100%;
+			position: relative;
+			input{
+				// position: absolute;
+				// right: 0;
+				background-color: transparent;
+				height: 100%;
+				border-radius: 6px;
+			}
+			img{
+				padding: 0 4px;
+				width: 28px;
+				height: 28px;
+				cursor: pointer;
+			}
+		}
+		.navbar__login{
+			margin: 0 6px;
+		a{
+			color: #000;
+			text-decoration: none;
+		}
+		}
+		.navbar__registration{
+			margin: 0 6px;
+
+			a{
+				color: #000;
+				text-decoration: none;
+			}
+		}
+		.navbar__setting{
+			margin: 0 8px;
+			display: flex;
+			align-items: center;
+			img{
+			
+			width: 28px;
+			height: 28px;
+			cursor: pointer;
+			}
+		
+		}
+	}
+ 
+}
+
+.navbar__avatar{
+		width: 40px;	
+		height: 40px;
+		border-radius: 50%;
+}

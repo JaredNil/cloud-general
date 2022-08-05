@@ -1,0 +1,29 @@
+@import "../utils/utils.scss";
+
+*{
+	margin: 0;
+	padding: 0; 
+}
+
+body{
+	background-color: rgb(250, 250, 240);
+
+}
+
+#root{
+	width: 100%;
+}
+
+.app{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wrap{
+	width: 1140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}

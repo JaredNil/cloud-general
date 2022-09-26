@@ -3,6 +3,8 @@ const path = require('path')
 
 const PORT = process.env.PORT || 8080
 
+console.log('File server.js worked!')
+
 const app = express()
 app.use(express.static(__dirname))
 app.use(express.static(path.resolve(__dirname, 'build')))

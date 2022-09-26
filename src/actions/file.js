@@ -41,7 +41,7 @@ export function createDir(dirId, name) {
 					type: 'dir'
 				},
 				{
-					headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+					headers: { Authorization: `Bearer ${localStorage.getItem('token')}`, }
 				})
 			dispatch(addFile(response.data))
 		} catch (e) {

@@ -1,6 +1,6 @@
 {
 	"name": "my-app",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
@@ -21,8 +21,15 @@
 		"redux-thunk": "^2.4.1",
 		"web-vitals": "^2.1.4"
 	},
+	"keywords": [
+		"js",
+		"javasctipt",
+		"html",
+		"scss"
+	],
+	"author": "JaredN",
 	"scripts": {
-		"start": "node server.js",
+		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"

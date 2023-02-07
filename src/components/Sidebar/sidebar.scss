@@ -10,6 +10,8 @@
 	background-color: #f4f4f4;
 	.sidebar__logo {
 		width: 100%;
+		height: 45px;
+
 		padding: 4px 0;
 		margin-bottom: 40px;
 
@@ -17,14 +19,25 @@
 		text-align: center;
 		font-size: 28px;
 		font-weight: 600;
+		vertical-align: middle;
+
 		color: #212;
 		user-select: none;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		span {
 			color: $font-color;
 			user-select: none;
 		}
 	}
-
+	* {
+		text-decoration: none;
+	}
+	a {
+		color: black;
+	}
 	.sidebar__create,
 	.sidebar__feedback {
 		background-color: #111;

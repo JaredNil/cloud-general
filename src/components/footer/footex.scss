@@ -5,14 +5,31 @@
 	justify-content: space-between;
 	align-items: center;
 	font-family: $font-family;
+	color: #ffffff;
 	font-size: 18px;
+
 	a {
 		text-decoration: none;
+		color: #ffffff;
+		z-index: 10;
 	}
 	.gh {
 	}
 	.tg {
 	}
 	.brend {
+		color: #ffffff;
+		z-index: 10;
+	}
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #000;
+		z-index: 0;
 	}
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import cloud from '../../assets/img/cloud.png'
 import setting from '../../assets/img/setting.png'
 import find from '../../assets/img/find.png'
 import './navbar.scss';
@@ -11,8 +10,9 @@ import avatarDefault from '../../assets/img/avatar.svg'
 import { showLoader } from '../../reducers/appReducer';
 import { API_URL } from '../../config';
 
-const Navbar = () => {
+const Navbar = (props) => {
 	const isAuth = useSelector(state => state.user.isAuth)
+
 	const dispatch = useDispatch()
 	const hello = useSelector(state => state.user.currentUser.email)
 	const currentDir = useSelector(state => state.files.currentDir)
@@ -43,16 +43,14 @@ const Navbar = () => {
 
 	return (
 		<div className="navbar">
-			<div className="container">
-				<NavLink to={'/'} >
-					<div className="navbar__main">
-						<img src={cloud} alt="" />
-						<span>CLOUD</span>
-					</div>
-				</NavLink >
+			<div className="navbar__container">
+
 				<div className="navbar__introduce">
-					Hi,
+					<div>Hi,</div>
 					<span> {(hello) ? hello : 'User'} </span>
+				</div>
+				<div className="navbar__find">
+					{props.children}
 				</div>
 				<div className="navbar__tools">
 					{isAuth &&
@@ -66,8 +64,8 @@ const Navbar = () => {
 							<img src={find} alt="" />
 						</div>}
 
-					{!isAuth && <div className="navbar__login"><Link to="/login">Войти</Link></div>}
-					{!isAuth && <div className="navbar__registration"><NavLink to="/registration">Регистрация</NavLink></div>}
+					{!isAuth && <div className="navbar__login"><Link to="/auth">Войти</Link></div>}
+					{!isAuth && <div className="navbar__registration"><Link to="/reg">Регистрация</Link></div>}
 					{isAuth && <div className="navbar__login" onClick={() => dispatch(logout())}>Выйти</div>}
 					{isAuth &&
 						<NavLink to={'/profile'}>
@@ -79,7 +77,7 @@ const Navbar = () => {
 					</div>
 				</div>
 			</div >
-		</div >
+		</div>
 	)
 }
 

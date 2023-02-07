@@ -1,0 +1,41 @@
+@import "../../utils/utils.scss";
+
+.navbar__path {
+	width: 100%;
+	height: 30px;
+	.navbar__path-container {
+		display: flex;
+		.folder {
+			font-size: 18px;
+			line-height: 30px;
+			font-family: $font-family;
+		}
+	}
+	*span {
+		font-size: 18px;
+		line-height: 30px;
+		font-family: $font-family;
+		cursor: pointer;
+	}
+	*img {
+		pointer-events: none;
+		user-select: none;
+
+		padding: 0px 1px 0 16px;
+	}
+	div {
+		cursor: pointer;
+	}
+}
+
+.mainFolder {
+	display: flex;
+	img {
+		padding: 0px 5px 0 0;
+	}
+}
+.folder {
+}
+span:last-child {
+	font-weight: 700;
+}

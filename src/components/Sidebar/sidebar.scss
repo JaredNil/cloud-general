@@ -1,0 +1,114 @@
+@import "./../../utils/utils.scss";
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: $font-family;
+	position: relative;
+
+	background-color: #f4f4f4;
+	.sidebar__logo {
+		width: 100%;
+		padding: 4px 0;
+		margin-bottom: 40px;
+
+		text-decoration: none;
+		text-align: center;
+		font-size: 28px;
+		font-weight: 600;
+		color: #212;
+		user-select: none;
+		span {
+			color: $font-color;
+			user-select: none;
+		}
+	}
+
+	.sidebar__create,
+	.sidebar__feedback {
+		background-color: #111;
+		color: white;
+
+		.sidebar__button-icon {
+		}
+		box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+	}
+	.sidebar__main,
+	.sidebar__sth {
+		background-color: white;
+	}
+	.sidebar__feedback {
+	}
+}
+
+.sidebar__button {
+	margin: 10px 0;
+	width: 100%;
+	max-width: 84%;
+	padding: 18px 0;
+
+	font-size: 18px;
+	line-height: 24px;
+
+	border-radius: 12px;
+	cursor: pointer;
+	user-select: none;
+
+	position: relative;
+	display: flex;
+	.sidebar__button-icon {
+		display: block;
+		position: relative;
+		width: 26%;
+
+		text-align: center;
+		font-size: 20px;
+	}
+	svg {
+		height: 24px;
+	}
+
+	transition: all 0.2s ease 0s;
+	left: 0px;
+	top: 0;
+	&:hover {
+		left: 5px;
+		top: 5px;
+	}
+}
+
+.sidebar__progress {
+	margin-top: 80px;
+	margin-bottom: 50px;
+	flex: 0 0 auto;
+	width: 80%;
+
+	user-select: none;
+	position: relative;
+	.sidebar__progress-title {
+		position: relative;
+		font-size: 22px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.sidebar__progress-line {
+		position: absolute;
+		background-color: #1111115e;
+		width: 100%;
+		height: 2px;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			background-color: #111111;
+			width: 50%;
+			height: 2px;
+		}
+	}
+	.sidebar__progress-used {
+		position: relative;
+		margin: 20px 8px 0 0;
+		text-align: right;
+	}
+}

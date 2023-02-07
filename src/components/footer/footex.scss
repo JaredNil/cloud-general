@@ -1,0 +1,18 @@
+@import "./../../utils/utils.scss";
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: $font-family;
+	font-size: 18px;
+	a {
+		text-decoration: none;
+	}
+	.gh {
+	}
+	.tg {
+	}
+	.brend {
+	}
+}

@@ -1,32 +1,39 @@
 
 import './app.scss';
+
+import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import React from 'react'
-import Navbar from "./navbar/navbar";
+import { useSelector, useDispatch } from 'react-redux';
+
+import Sidebar from './Sidebar/Sidebar';
 import Registration from './authorization/Registration';
 import Login from './authorization/Login';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { auth } from './../actions/user';
 import Disk from './disk/Disk';
 import Profile from './profile/Profile'
+
+import { auth } from './../actions/user';
+import Footer from './footer/Footer';
+import Navbar from './navbar/Navbar';
+
 
 
 function App() {
 	const isAuth = useSelector(state => state.user.isAuth)
 	const dispatch = useDispatch()
 
-	useEffect(() => {
-		dispatch(auth())
-	}, [])
+	useEffect(() => { dispatch(auth()) }, [])
 
 	return (
-		<BrowserRouter  >
+		<BrowserRouter>
 			<div className="app">
-				<Navbar />
-				<div className="wrap">
+				{/* <Navbar /> */}
+				<Sidebar />
+				<section className="content">
+					<Navbar />
 
-					{!isAuth &&
+
+
+					{/* {!isAuth &&
 						<Routes>
 							<Route path="/login" element={<Login />}></Route>
 							<Route path="/registration" element={<Registration />}></Route>
@@ -37,9 +44,10 @@ function App() {
 							<Route path="*" element={<Disk />}>	</Route>
 							<Route path="/profile" element={<Profile />}>	</Route>
 						</Routes>
-					}
+					} */}
 
-				</div>
+				</section>
+				<Footer />
 			</div>
 		</BrowserRouter>
 	);

@@ -28,11 +28,11 @@ const Navbar = () => {
 
 	function searchChangeHandler(e) {
 		setSearchName(e.target.value)
-		if (searchTimeout != false) {
+		if (searchTimeout !== false) {
 			clearTimeout(searchTimeout)
 		}
 		dispatch(showLoader())
-		if (e.target.value != '') {
+		if (e.target.value !== '') {
 			setSearchTimeout(setTimeout((value) => {
 				dispatch(searchFiles(value));
 			}, 500, e.target.value))

@@ -7,13 +7,10 @@
 	font-family: $font-family;
 	position: relative;
 
-	background-color: #f4f4f4;
-
 	transition: all 1s ease 0s;
 	.sidebar__logo {
 		width: 100%;
 		height: 45px;
-
 		padding: 4px 0;
 		margin-bottom: 40px;
 
@@ -32,6 +29,15 @@
 		span {
 			color: $font-color;
 			user-select: none;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 2px;
+			background-color: #111;
+			right: 12px;
+			top: 0;
 		}
 	}
 	* {
@@ -52,6 +58,7 @@
 	.sidebar__main,
 	.sidebar__sth {
 		background-color: white;
+		border: solid 2px #000;
 	}
 	.sidebar__feedback {
 	}

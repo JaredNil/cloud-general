@@ -41,20 +41,6 @@ function App() {
 
 				<Content />
 
-
-				{/* {!isAuth &&
-						<Routes>
-							<Route path="/login" element={<Login />}></Route>
-							<Route path="/registration" element={<Registration />}></Route>
-						</Routes>
-					}
-					{isAuth &&
-						<Routes>
-							<Route path="*" element={<Disk />}>	</Route>
-							<Route path="/profile" element={<Profile />}>	</Route>
-						</Routes>
-					} */}
-
 			</section>
 			<Footer />
 		</div>

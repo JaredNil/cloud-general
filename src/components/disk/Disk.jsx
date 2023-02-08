@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getFiles, uploadFile } from './../../actions/file';
 import FileList from './fileList/FileList';
 import './disk.scss';
-import Popup from "./Popup";
+// import Popup from "./Popup";
 import { setPopupDisplay, setCurrentDir, setFileView } from './../../reducers/fileReducer';
-import Uploader from './uploader/Uploader';
+import Uploader from './../content/uploader/Uploader';
 
 
 const Disk = () => {
@@ -18,7 +18,7 @@ const Disk = () => {
 	const currentDir = useSelector(state => state.files.currentDir)
 	useEffect(() => {
 		dispatch(getFiles(currentDir, sort))
-		// eslint-disable-next-line
+
 	}, [currentDir, sort])
 
 	function showPopupHandler() {
@@ -75,6 +75,7 @@ const Disk = () => {
 				<button className="disk__back" onClick={() => backClickHandler()}>Назад</button>
 				<button className="disk__create" onClick={() => showPopupHandler()}>Создать</button>
 				<div className="disk__upload">
+
 					<label
 						className="disk__upload-label"
 						htmlFor='disk__upload-input'
@@ -96,7 +97,7 @@ const Disk = () => {
 				</div>
 			</div>
 			<FileList />
-			<Popup />
+			{/* <Popup /> */}
 			<Uploader />
 		</div>
 		:

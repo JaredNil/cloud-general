@@ -4,7 +4,7 @@
 	width: 100%;
 
 	.contentTable__label {
-		margin: 20px 0 40px 0;
+		margin: 20px 0 6px 0;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -35,6 +35,22 @@
 			}
 		}
 	}
+	.contentTable-drag {
+		margin-top: 30px;
+		height: 50vh;
+		border: dotted 5px #f32525;
+
+		font-family: $font-family;
+		font-size: 46px;
+		user-select: none;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		transition: all 0.1s ease 0s;
+	}
+	transition: all 0.1s ease 0s;
 }
 
 .tb {
@@ -55,31 +71,123 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+
+	&.tb__line-title {
+		user-select: none;
+	}
+
+	.logo {
+		flex: 0 0 40px;
+		width: 40px;
+		margin-right: 20px;
+		&.logo-back {
+			margin-left: 10px;
+			width: 30px;
+			margin-right: 20px;
+			user-select: none;
+			cursor: pointer;
+		}
+	}
 	.name {
-		flex: 1 0 auto;
+		flex: 1 1 100%;
 	}
 	.date {
-		min-width: 120px;
+		flex: 0 0 220px;
+		min-width: 220px;
 	}
 	.size {
+		flex: 0 0 120px;
 		min-width: 120px;
 	}
 	.tool {
+		flex: 0 0 40px;
 		min-width: 40px;
+
+		&:hover .tool_menu {
+			right: 50%;
+			opacity: 100%;
+		}
+		.tool_image {
+			cursor: pointer;
+		}
+		position: relative;
+		.tool_menu {
+			opacity: 0;
+			transition: opacity 0.3s ease 0s;
+			position: absolute;
+			right: -200px;
+			z-index: 20;
+			border-radius: 10px;
+
+			min-height: 40px;
+			background-color: #b67f7fc4;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			div {
+				cursor: pointer;
+				margin: 12px 10px;
+				font-size: 22px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.download,
+			.delete {
+				position: relative;
+				display: block;
+				transition: all 0.5s ease 0s;
+				z-index: 40;
+			}
+			&::before {
+				position: absolute;
+				left: -15%;
+				top: -15%;
+				content: "";
+				height: 130%;
+				width: 130%;
+				z-index: 0;
+			}
+		}
 	}
+
 	position: relative;
 	&::after {
 		position: absolute;
 		content: "";
 		height: 1px;
 		width: 100%;
-
 		bottom: 0;
 		left: 0;
 		background-color: #5d5d5d95;
+	}
+	.download,
+	.delete {
+		display: none;
+	}
+	&:hover .download {
+		display: block;
+	}
+	&:hover .delete {
+		display: block;
 	}
 }
 .tb__line-title {
 	color: #4e4e4e94;
 	font-weight: 800;
+}
+
+.content__table-empty {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span {
+		font-family: $font-family;
+		font-size: 42px;
+		user-select: none;
+	}
 }

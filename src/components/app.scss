@@ -55,8 +55,9 @@ body {
 	@media (width <= 576px) {
 		max-width: auto;
 	}
-
+	position: relative;
 	.sidebar {
+		flex: 0 1 calc(100% * 0.183);
 		min-width: calc(100% * 0.183);
 	}
 }
@@ -71,8 +72,7 @@ body {
 }
 
 section.content {
-	flex: 1 0 auto;
-
+	flex: 1 1 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

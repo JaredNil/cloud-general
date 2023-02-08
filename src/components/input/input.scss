@@ -1,14 +1,12 @@
 @import "../../utils/utils.scss";
 
-input{
+input {
 	font-family: $font-family;
 	border: none;
-	border-bottom: $font-color solid 3px;
 	background: transparent;
 	padding: 3px;
-	&:focus{
+	&:focus {
 		outline: none;
 		transform: scale(1.01);
 	}
-
 }

@@ -12,8 +12,7 @@ const Intro = () => {
 			<Sidebar isAuth={isAuth} />
 			<section className="content">
 				<Navbar />
-				hi, this app
-				<Registration></Registration>
+				<Registration />
 			</section>
 			<Footer />
 		</div>

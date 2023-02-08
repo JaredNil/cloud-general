@@ -1,0 +1,48 @@
+@import "./../../utils/utils.scss";
+
+.introduceText {
+	font-family: $font-family;
+	position: relative;
+	margin: 60px auto;
+	padding: 20px 50px;
+	font-size: 28px;
+	align-self: flex-start;
+}
+.introduceEntity {
+	font-family: $font-family;
+	position: relative;
+	margin: 60px 0px 0px 0px;
+	padding: 20px 50px;
+	font-size: 22px;
+	align-self: flex-start;
+}
+
+.introduceButtons {
+	width: 60%;
+
+	font-family: $font-family;
+
+	display: flex;
+	justify-content: space-between;
+
+	.btn-auth,
+	.btn-reg {
+		width: 220px;
+		height: 60px;
+		background-color: $font-color;
+		text-decoration: none;
+		border-radius: 10px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+
+		span {
+			font-size: 28px;
+			font-weight: 400;
+			color: #ffffff;
+			text-decoration: none;
+		}
+	}
+}

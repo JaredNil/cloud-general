@@ -2,7 +2,6 @@ import React from 'react';
 import Sidebar from './../components/sidebar/Sidebar';
 import Footer from './../components/footer/Footer';
 import Navbar from './../components/navbar/Navbar';
-import Registration from './../components/authorization/Registration';
 import Login from '../components/authorization/Login';
 
 const Intro = () => {
@@ -13,8 +12,7 @@ const Intro = () => {
 			<Sidebar isAuth={isAuth} />
 			<section className="content">
 				<Navbar />
-				hi, this app
-				<Login></Login>
+				<Login />
 			</section>
 			<Footer />
 		</div>

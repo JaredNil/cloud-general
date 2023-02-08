@@ -6,6 +6,7 @@ import { API_URL } from '../config.js';
 
 
 
+
 export const registration = async (email, password) => {
 	try {
 		const responce = await axios.post(`${API_URL}api/auth/registration`,
@@ -32,6 +33,8 @@ export const login = (email, password) => {
 				})
 			store.dispatch(setUser(responce.data.user))
 			localStorage.setItem('token', responce.data.token)
+			window.history.pushState({}, undefined, "/app");
+			window.location.reload()
 
 			console.log(responce.data);
 		} catch (error) {
@@ -50,7 +53,6 @@ export const auth = () => {
 			)
 			store.dispatch(setUser(responce.data.user))
 			localStorage.setItem('token', responce.data.token)
-
 
 			console.log(responce.data);
 		} catch (error) {

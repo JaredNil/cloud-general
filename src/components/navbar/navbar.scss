@@ -53,23 +53,49 @@
 
 		transition: all 1s ease 0s;
 
+		.navbar__find {
+			min-width: 400px;
+			padding: 0 10px;
+
+			input {
+				font-size: 16px;
+				font-family: $font-family;
+				&::placeholder {
+					font-family: $font-family;
+					font-weight: 300;
+				}
+			}
+
+			border: solid 1px #444;
+			border-radius: 10px;
+			transition: all 0.3s ease 0s;
+			&:focus,
+			&:hover,
+			&:active {
+				border: solid 1px #ce1c1c;
+			}
+		}
+
 		.navbar__login {
-			margin: 0 6px;
+			margin: 0 12px;
 			a {
+				font-family: $font-family;
+				letter-spacing: -0px;
 				color: #000;
 				text-decoration: none;
 			}
 		}
 		.navbar__registration {
-			margin: 0 6px;
-
+			margin: 0 10px;
 			a {
+				font-family: $font-family;
+				letter-spacing: 0.2px;
 				color: #000;
 				text-decoration: none;
 			}
 		}
 		.navbar__setting {
-			margin: 0 8px;
+			margin: 0 6px;
 			display: flex;
 			align-items: center;
 			img {
@@ -83,6 +109,7 @@
 
 .navbar__avatar {
 	width: 40px;
+	margin: 0 6px 0 12px;
 	height: 40px;
 	border-radius: 50%;
 }

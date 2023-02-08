@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import setting from '../../assets/img/setting.png'
+import setting from '../../assets/img/setting.svg'
 import find from '../../assets/img/find.png'
 import './navbar.scss';
 import { useSelector, useDispatch } from 'react-redux';
@@ -49,9 +49,6 @@ const Navbar = (props) => {
 					<div>Hi,</div>
 					<span> {(hello) ? hello : 'User'} </span>
 				</div>
-				<div className="navbar__find">
-					{props.children}
-				</div>
 				<div className="navbar__tools">
 					{isAuth &&
 						<div className="navbar__find">
@@ -59,14 +56,14 @@ const Navbar = (props) => {
 								value={searchName}
 								onChange={e => searchChangeHandler(e)}
 								type="text"
-								placeholder='Поиск'
+								placeholder='Поиск, что умнее тебя'
 							/>
 							<img src={find} alt="" />
-						</div>}
-
+						</div>
+					}
 					{!isAuth && <div className="navbar__login"><Link to="/auth">Войти</Link></div>}
 					{!isAuth && <div className="navbar__registration"><Link to="/reg">Регистрация</Link></div>}
-					{isAuth && <div className="navbar__login" onClick={() => dispatch(logout())}>Выйти</div>}
+
 					{isAuth &&
 						<NavLink to={'/profile'}>
 							<img className='navbar__avatar' src={avatar} alt="" />
@@ -75,6 +72,7 @@ const Navbar = (props) => {
 					<div className="navbar__setting">
 						<img src={setting} alt="" />
 					</div>
+					{isAuth && <div className="navbar__login" onClick={() => dispatch(logout())}><Link to="/">Выйти</Link></div>}
 				</div>
 			</div >
 		</div>

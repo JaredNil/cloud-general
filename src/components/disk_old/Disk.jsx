@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getFiles, uploadFile } from './../../actions/file';
+import { getFiles, uploadFile } from '../../actions/file';
 import FileList from './fileList/FileList';
 import './disk.scss';
 // import Popup from "./Popup";
-import { setPopupDisplay, setCurrentDir, setFileView } from './../../reducers/fileReducer';
-import Uploader from './../content/uploader/Uploader';
+import { setPopupDisplay, setCurrentDir, setFileView } from '../../reducers/fileReducer';
+import Uploader from '../content/uploader/Uploader';
 
 
 const Disk = () => {

@@ -13,13 +13,20 @@
 	position: relative;
 
 	&__header {
+		font-family: $font-family;
 		font-size: 30px;
-		font-weight: 700;
+		font-weight: 500;
+		user-select: none;
 	}
 
 	input {
-		margin: 12px 20px;
+		margin: 16px 20px;
+		font-size: 18px;
 		border-bottom: solid 4px rgb(92, 93, 93);
+		&::placeholder {
+			font-size: 18px;
+			font-family: $font-family;
+		}
 	}
 
 	&__btn {

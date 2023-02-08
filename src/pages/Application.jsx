@@ -1,10 +1,41 @@
-import React from 'react';
-import Main from './../components/App';
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { auth } from './../actions/user';
+import Footer from './../components/footer/Footer';
+import Navbar from './../components/navbar/Navbar';
+import Content from './../components/content/Content';
+import LabelPathBar from './../components/labelPathBar/LabelPathBar';
+import Input from './../utils/input/Input';
+import Sidebar from './../components/sidebar/Sidebar';
+
+import './../components/index.scss'
+
+
 
 const Application = () => {
+
+	const isAuth = useSelector(state => state.user.isAuth)
+	const dispatch = useDispatch()
+
+	useEffect(() => { dispatch(auth()) }, [])
+
+
 	return (
-		<div>
-			<Main></Main>
+		<div className="">
+			<div className="app">
+				<Sidebar isAuth={isAuth} />
+				<section className="content">
+					<Navbar>
+						<Input />
+					</Navbar>
+
+					<LabelPathBar />
+
+					<Content />
+
+				</section>
+				<Footer />
+			</div>
 		</div>
 	);
 };

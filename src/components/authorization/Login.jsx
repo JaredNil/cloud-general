@@ -19,7 +19,7 @@ const Login = () => {
 			<Input value={pass} setValue={setPass} type="password" placeholder="Введите пароль" />
 			<button
 				className='authorization__btn'
-				onClick={() => dispatch(login(email, pass))}
+				onClick={() => { dispatch(login(email, pass)); }}
 			>
 				Войти
 			</button>
@@ -28,3 +28,5 @@ const Login = () => {
 }
 
 export default Login
+
+// 

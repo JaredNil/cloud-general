@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import './content.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { getFiles, uploadFile } from './../../actions/file';
+
 import line from './../../assets/img/line.svg'
 import block from './../../assets/img/block.svg'
 
-import { setPopupDisplay, setCurrentDir, setFileView } from './../../reducers/fileReducer';
-import FileList from '../disk/fileList/FileList';
+import FileList from './fileList/FileList';
 import Popup from './../content/Popup';
 import Uploader from './../content/uploader/Uploader';
+import { setFileView } from './../../reducers/fileReducer';
+import { getFiles, uploadFile } from './../../actions/file';
+
+import './content.scss'
 
 const Content = () => {
 	const dispatch = useDispatch()

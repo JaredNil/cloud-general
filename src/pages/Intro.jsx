@@ -6,10 +6,11 @@ import Footer from './../components/footer/Footer';
 import Navbar from './../components/navbar/Navbar';
 
 import './scss/intro.scss'
+import { useSelector } from 'react-redux';
 
 
 const Intro = () => {
-	let isAuth = false
+	const isAuth = useSelector(state => state.user.isAuth)
 
 	return (
 		<div className="app">

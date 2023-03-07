@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './file.scss'
 import dirLogo from '../../../../assets/img/dir.svg'
 import fileLogo from '../../../../assets/img/file.svg'
@@ -14,6 +14,8 @@ const File = ({ file }) => {
 	const dispatch = useDispatch();
 	const currentDir = useSelector(state => state.files.currentDir)
 	let fileView = useSelector(state => state.files.view)
+
+
 
 	function openHandler() {
 		if (file.type === 'dir') {
@@ -32,10 +34,15 @@ const File = ({ file }) => {
 		dispatch(deleteFile(file))
 	}
 
+
+
+
 	if (fileView == 'list') {
 
 		return (
-			<div className="tb__line" key={file._id} onClick={() => openHandler(file)}>
+			<div className="tb__line" key={file._id}
+				onClick={() => openHandler(file)}
+			>
 				<img className="logo" src={file.type === 'dir' ? dirLogo : fileLogo} alt="" />
 				<div className="name">{file.name}</div>
 				<div className="date">{file.date.slice(0, 10)}</div>

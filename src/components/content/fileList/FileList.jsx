@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux';
-import React from 'react'
+import React, { useState } from 'react'
 
 import '../fileList/file/file.scss'
 import './fileList.scss'
@@ -19,10 +19,28 @@ const FileList = () => {
 	let files = useSelector(state => state.files.files)
 	let fileView = useSelector(state => state.files.view)
 
+	let [select, setSelect] = useState([])
+
+	setSelect = ((node) => {
+		const curList = select
+		curList.push(node.children[1].innerHTML)
+		console.log(select)
+		return curList
+	})
+
+	function addBuffer(event) {
+		if (event.target.classList.contains('tb__line')) {
+			setSelect(event.target)
+		}
+	}
+
+
 	function backClickHandler() {
 		const backDirId = dirStack.pop()
 		dispatch(setCurrentDir(backDirId))
 	}
+
+
 
 
 	if (files.length === 0) {
@@ -48,8 +66,8 @@ const FileList = () => {
 
 	if (fileView === 'list') {
 		return (
-			<div className="contentTable__table tb">
-				<div className="tb__container">
+			<div className="contentTable__table tb" onClick={addBuffer}>
+				<div className="tb__container" >
 					<div className="tb__line tb__line-title">
 						<img className="logo logo-back" src={backFolder} alt="#" onClick={() => backClickHandler()} />
 						<div className="name">Name</div>

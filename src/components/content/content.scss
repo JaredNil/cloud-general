@@ -74,6 +74,9 @@
 
 	&.tb__line-title {
 		user-select: none;
+		&:hover {
+			background-color: #fff;
+		}
 	}
 
 	.logo {
@@ -166,6 +169,10 @@
 	.download,
 	.delete {
 		display: none;
+	}
+	&:hover {
+		background-color: #efebeb;
+		transition: all 0.05s ease 0s;
 	}
 	&:hover .download {
 		display: block;

@@ -1,0 +1,209 @@
+@import "../../utils/utils.scss";
+
+.authorisation {
+	position: relative;
+	width: 100%;
+	margin: 140px 0;
+	padding: 0 110px;
+	font-family: $font-family;
+
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	.authorisation__leftbar {
+		flex: 0 1 70%;
+		padding: 28px 40px 0 40px;
+		margin-bottom: 28px;
+		box-sizing: border-box;
+		background-color: #fff;
+		user-select: none;
+	}
+	.authorisation__rightbar {
+		flex: 0 0 30%;
+		height: 100%;
+		padding: 28px 40px;
+		background-color: #0d0a0ac2;
+		box-sizing: border-box;
+	}
+	@media (max-width: 576px) {
+		padding: 0 0;
+		.authorisation__leftbar {
+			flex: 0 0 100%;
+		}
+		.authorisation__rightbar {
+			display: none;
+			flex: 0 0 0%;
+		}
+	}
+}
+
+.authorisation__title {
+	padding-bottom: 12px;
+
+	font-size: 34px;
+	line-height: 34px;
+	font-weight: 600;
+	color: #000000cf;
+
+	user-select: none;
+}
+.authorisation__block {
+	line-height: 1px;
+	margin-bottom: 19px;
+	span {
+		display: block;
+		padding-bottom: 2px;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: -0.6px;
+		color: #00000095;
+		user-select: none;
+	}
+	input {
+		font-size: 18px;
+		line-height: 18px;
+
+		box-sizing: border-box;
+		background: transparent;
+
+		padding: 18px 0 18px 12px;
+		margin: 5px 0 0 0;
+
+		border: 1px solid #0000004d;
+
+		&::placeholder {
+			font-family: $font-family;
+			font-weight: 300;
+		}
+	}
+
+	.authorisation__block-status {
+		.status__container {
+			position: relative;
+			left: 12px;
+			width: calc(100% - 12px);
+			.status {
+				position: relative;
+				top: 0;
+				height: 20px;
+				padding: 2px 0;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 16px;
+				color: #fff;
+				user-select: none;
+				transition: all 0.4s ease 0s;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: -12px;
+				transition: all 0.4s ease 0s;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				height: calc(100% - 12px);
+				width: 12px;
+				top: 0;
+				left: -12px;
+				transition: all 0.4s ease 0s;
+			}
+		}
+	}
+}
+.authorisation__leftbar {
+	position: relative;
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: -28px;
+		left: 0px;
+		border: 14px solid transparent;
+		border-top: 14px solid #fff;
+		border-right: 14px solid #fff;
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: -28px;
+		left: 28px;
+		width: calc(100% - 28px);
+		height: 28px;
+		background-color: #fff;
+	}
+}
+
+.authorisation__rightbar {
+	position: relative;
+
+	* {
+		color: #fff;
+	}
+	.authorisation__information {
+		font-weight: 300;
+		padding: 20px 0;
+	}
+	.authorisation__btn {
+		position: absolute;
+		left: 40px;
+		bottom: 28px;
+	}
+}
+
+.authorisation__btn {
+	font-weight: 700;
+	background-color: $font-color;
+	color: white;
+	margin-top: 30px;
+	padding: 18px 30px;
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+._init {
+	.status__container {
+		height: 0px;
+		z-index: -100;
+		.status,
+		&::before {
+			background-color: $form-bg;
+		}
+		&::after {
+			border: 6px solid transparent;
+			border-top: 6px solid $form-bg;
+			border-right: 6px solid $form-bg;
+		}
+	}
+}
+._access {
+	.status__container {
+		height: auto;
+		z-index: 10;
+		.status,
+		&::before {
+			background-color: $form-access;
+		}
+		&::after {
+			border: 6px solid transparent;
+			border-top: 6px solid $form-access;
+			border-right: 6px solid $form-access;
+		}
+	}
+}
+._deny {
+	.status__container {
+		height: auto;
+		z-index: 10;
+		.status,
+		&::before {
+			background-color: $form-deny;
+		}
+		&::after {
+			border: 6px solid transparent;
+			border-top: 6px solid $form-deny;
+			border-right: 6px solid $form-deny;
+		}
+	}
+}

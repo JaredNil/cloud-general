@@ -25,7 +25,6 @@ const Content = () => {
 		dispatch(getFiles(currentDir, sort))
 	}, [currentDir, sort])
 
-
 	function fileUploadHandler(event) {
 		const files = [...event.target.files]
 		files.forEach(file => dispatch(uploadFile(file, currentDir)))

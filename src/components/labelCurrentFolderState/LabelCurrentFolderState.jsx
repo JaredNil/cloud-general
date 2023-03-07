@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import begin from './../../assets/img/begin.svg'
 import arrow from './../../assets/img/arrow.svg'
-import './labelPathBar.scss'
+import './labelCurrentFolderState.scss'
 
 const LabelPathBar = () => {
 	return (

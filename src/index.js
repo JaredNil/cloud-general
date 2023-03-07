@@ -5,6 +5,7 @@ import { store } from './reducers'
 import { Provider } from 'react-redux'
 import router from './pages/router/Router';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<Provider store={store}>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // import Sidebar from './../components/sidebar/Sidebar';
 import Footer from './../components/footer/Footer';
-import Navbar from './../components/navbar/Navbar';
+import Navbar from './../components/navbar/Navbar.jsx';
 
 import './scss/intro.scss'
 import { useSelector } from 'react-redux';

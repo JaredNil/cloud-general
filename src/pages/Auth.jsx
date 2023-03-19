@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './../components/footer/Footer';
-import Navbar from './../components/navbar/Navbar';
+import Navbar from './../components/navbar/Navbar.jsx';
 import Login from '../components/authorisation/Authorisation';
 
 const Intro = () => {

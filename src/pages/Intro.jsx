@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Sidebar from './../components/sidebar/Sidebar';
+// import Sidebar from './../components/sidebar/Sidebar';
 import Footer from './../components/footer/Footer';
 import Navbar from './../components/navbar/Navbar';
 
@@ -14,7 +14,7 @@ const Intro = () => {
 
 	return (
 		<div className="app">
-			<Sidebar isAuth={isAuth} />
+			{/* <Sidebar isAuth={isAuth} /> */}
 			<section className="content">
 				<Navbar />
 				<div className="introduceText">

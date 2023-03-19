@@ -6,7 +6,7 @@ import Navbar from './../components/navbar/Navbar';
 import Content from './../components/content/Content';
 import LabelPathBar from '../components/labelCurrentFolderState/LabelCurrentFolderState';
 import Input from './../utils/input/Input';
-import Sidebar from './../components/sidebar/Sidebar';
+// import Sidebar from './../components/sidebar/Sidebar';
 
 import './../components/index.scss'
 
@@ -23,7 +23,7 @@ const Application = () => {
 	return (
 		<div className="">
 			<div className="app">
-				<Sidebar isAuth={isAuth} />
+				{/* <Sidebar isAuth={isAuth} /> */}
 
 				<section className="content">
 					<Navbar>

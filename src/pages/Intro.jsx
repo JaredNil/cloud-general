@@ -29,9 +29,6 @@ const Intro = () => {
 					<Link className="btn-auth" to={'/auth'}>
 						<span>Вход</span>
 					</Link>
-					<Link className="btn-reg" to={'/reg'}>
-						<span>Регистрация</span>
-					</Link>
 				</div>
 			</section>
 			<Footer />

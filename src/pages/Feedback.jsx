@@ -1,6 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import Sidebar from './../components/sidebar/Sidebar';
+// import Sidebar from './../components/sidebar/Sidebar';
 import Footer from './../components/footer/Footer';
 
 const Feedback = () => {
@@ -9,7 +8,7 @@ const Feedback = () => {
 
 	return (
 		<div className="app">
-			<Sidebar isAuth={isHide} />
+			{/* <Sidebar isAuth={isHide} /> */}
 			<section
 				className="content"
 				style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', fontSize: '30px' }}

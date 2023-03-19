@@ -146,9 +146,6 @@
 		padding: 20px 0;
 	}
 	.authorisation__btn {
-		position: absolute;
-		left: 40px;
-		bottom: 28px;
 	}
 }
 
@@ -160,6 +157,32 @@
 	padding: 18px 30px;
 	align-self: flex-end;
 	cursor: pointer;
+}
+.authorisation__ratio {
+	position: absolute;
+	left: 40px;
+	bottom: 28px;
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	background-color: $font-color;
+
+	cursor: pointer;
+	user-select: none;
+
+	.authorisation__ratio-button {
+		position: relative;
+		height: 55px;
+		width: 80px;
+		padding: 18px 30px;
+		align-self: flex-end;
+		cursor: pointer;
+	}
+	.authorisation__ratio-text {
+		position: relative;
+		padding-left: 10px;
+		width: 130px;
+	}
 }
 
 ._init {
@@ -204,6 +227,33 @@
 			border: 6px solid transparent;
 			border-top: 6px solid $form-deny;
 			border-right: 6px solid $form-deny;
+		}
+	}
+}
+
+.swither {
+	content: "";
+	position: absolute;
+	top: 22.5%;
+	left: 12.5%;
+	height: 55%;
+	width: 75%;
+	border-radius: 30.5px;
+	background-color: #fff;
+	.circle {
+		content: "";
+		position: absolute;
+		top: 16.5%;
+		left: 9%;
+		height: 22px;
+		width: 22px;
+		border-radius: 30.5px;
+		background-color: #131313;
+
+		transition: all 0.3s ease 0s;
+		&._active {
+			left: 54%;
+			background-color: $font-color;
 		}
 	}
 }

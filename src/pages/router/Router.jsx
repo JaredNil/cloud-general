@@ -2,7 +2,6 @@ import { createBrowserRouter, createRoutesFromElements, Route } from 'react-rout
 import Intro from './../Intro';
 import Application from './../Application';
 import Auth from './../Auth';
-import Reg from './../Reg';
 import Feedback from './../Feedback';
 
 const router = createBrowserRouter(
@@ -21,10 +20,6 @@ const router = createBrowserRouter(
 			<Route
 				path="/auth"
 				element={<Auth />}
-			/>
-			<Route
-				path="/reg"
-				element={<Reg />}
 			/>
 			<Route
 				path="/feedback"

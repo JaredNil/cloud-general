@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { auth } from './../actions/user';
-import Footer from './../components/footer/Footer';
+import Footer from './../components/footer/Footer.jsx';
 import Navbar from './../components/navbar/Navbar.jsx';
-import Content from './../components/content/Content';
-import LabelPathBar from '../components/labelCurrentFolderState/LabelCurrentFolderState';
-import Input from './../utils/input/Input';
-// import Sidebar from './../components/sidebar/Sidebar';
+import Content from './../components/content/Content.jsx';
+import LabelPathBar from '../components/labelCurrentFolderState/LabelCurrentFolderState.jsx';
+import Input from './../utils/input/Input.jsx';
+// import Sidebar from './../components/sidebar/Sidebar.jsx';
 
 import './../components/index.scss'
 

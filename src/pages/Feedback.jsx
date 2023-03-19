@@ -1,6 +1,6 @@
 import React from 'react';
-// import Sidebar from './../components/sidebar/Sidebar';
-import Footer from './../components/footer/Footer';
+// import Sidebar from './../components/sidebar/Sidebar.jsx';
+import Footer from './../components/footer/Footer.jsx';
 
 const Feedback = () => {
 

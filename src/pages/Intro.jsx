@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import Sidebar from './../components/sidebar/Sidebar';
-import Footer from './../components/footer/Footer';
+// import Sidebar from './../components/sidebar/Sidebar.jsx';
+import Footer from './../components/footer/Footer.jsx';
 import Navbar from './../components/navbar/Navbar.jsx';
 
 import './scss/intro.scss'
